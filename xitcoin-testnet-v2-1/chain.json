@@ -1,5 +1,5 @@
 {
-  "name": "Xitcoin Public Testnet",
+  "name": "Xitchain Testnet",
   "status": "active",
   "cosmos_chain_id": "xitcoin-testnet-v2-1",
   "evm_chain_id": 101089,
@@ -56,12 +56,27 @@
     "validator_incentives_module_xtc": "20000000"
   },
   "bridge": {
-    "route_configured": false,
+    "route_configured": true,
     "status": "disabled",
-    "note": "No route configuration exists in genesis; the default paused=false value does not enable a bridge route."
+    "enabled": false,
+    "paused": true,
+    "route_id": "0x21121c16b53a726056a6683f00c7eb4da5501ce8a2abc8a4677e06f1e94b5cd9",
+    "route": "XTC: Cronos testnet (338) to Xitchain Testnet",
+    "initialized_at": "2026-09-03T19:17:39Z",
+    "initialization_height": 74270,
+    "initialization_tx": "721E397ABC01D3D195B98AFE927B9ED666ED6DBC28FD1EEEA0909BC8D8AF4A5E",
+    "bridge_signers": 3,
+    "attestation_threshold": 2,
+    "guardian": true,
+    "limits_xtc": {
+      "max_transfer": "100",
+      "daily": "500",
+      "max_outstanding": "1000000"
+    },
+    "note": "The route was initialised after genesis by MsgInitializeRouteConfig, disabled and paused. Resuming it, changing its limits or rotating its signers needs 2 of the 3 bridge signers; the guardian can only pause. No resume, configuration update, attestation or outbound transfer has been recorded since initialisation."
   },
   "notes": [
-    "The public network name is Xitcoin Public Testnet.",
+    "The public network name is Xitchain Testnet.",
     "This V2 manifest is the only active public testnet record.",
     "The four initial validators are Atlas, Borealis, Meridian and Zenith.",
     "Testnet assets have no monetary value.",
