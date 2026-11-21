@@ -1,20 +1,40 @@
 {
-  "consolidated_statistical_records": 39,
-  "demographic_pool_atomic": "96500000000000000000000000",
-  "demographic_weight_percent": 25,
-  "equal_pool_atomic": "289500000000000000000000000",
-  "equal_weight_percent": 75,
-  "population_date": "2026-07-01",
-  "population_transformation": "square_root",
+  "status": "planned_for_mainnet_not_implemented_on_chain",
+  "selection_basis": "united_nations_member_states",
   "position_count": 193,
   "reference_year": 2026,
-  "reserve_atomic": "386000000000000000000000000",
-  "reserve_xtc": "386000000.000000000000000000",
-  "selection_basis": "united_nations_member_states",
-  "un_member_positions": 193,
-  "unassigned_statistical_records": [
-    "COK",
-    "ESH",
-    "NIU"
-  ]
+  "population_source": "UN World Population Prospects 2024, medium variant",
+  "population_date": "2026-07-01",
+  "population_basis": "figure published for each Member State, used as it is (no territorial consolidation)",
+  "population_transformation": "square_root",
+  "pool_xtc": "386000000",
+  "pool_atomic": "386000000000000000000000000",
+  "equal_share_per_state_xtc": "1500000",
+  "equal_pool_xtc": "289500000",
+  "population_pool_xtc": "96500000",
+  "rounding": "whole XTC, largest remainder, ties by ISO3 code",
+  "rounding_units_assigned": 96,
+  "funding": "Funded from the Xitchain reserve of Kcalb Ltd (Cronos wallet 0x4993F2012D72C3cFb67eBde946481b9dbFB3F254). At mainnet the pool crosses the bridge one for one, locked on Cronos, so the total supply stays 5,250,000,000 XTC.",
+  "self_stake_per_state_xtc": "5000000",
+  "vesting": "20% a year over 5 years while the validator stays active and in good standing",
+  "examples": {
+    "smallest": {
+      "name": "Tuvalu",
+      "iso3": "TUV",
+      "population_2026": 9362,
+      "allocation_xtc": 1511216
+    },
+    "median": {
+      "name": "Hungary",
+      "iso3": "HUN",
+      "population_2026": 9585818,
+      "allocation_xtc": 1858884
+    },
+    "largest": {
+      "name": "India",
+      "iso3": "IND",
+      "population_2026": 1476625576,
+      "allocation_xtc": 5954251
+    }
+  }
 }
