@@ -51,7 +51,7 @@ jobs:
               assert genesis["chain_id"] == manifest["cosmos_chain_id"]
               assert genesis["genesis_time"] == manifest["genesis"]["genesis_time"]
               if manifest["status"] == "active":
-                  assert manifest["name"] == "Xitcoin Public Testnet"
+                  assert manifest["name"] == "Xitchain Testnet"
               assert manifest["native_currency"] == {
                   "name": "Xitcoin",
                   "symbol": "XTC",
@@ -65,6 +65,9 @@ jobs:
           assert dict(records)["xitcoin-testnet-1"] == "retired"
           print("[OK] canonical active record:", active[0])
           PY
+
+      - name: Check the planned Member State seat allocation
+        run: python3 xitcoin-testnet-1/compute-sovereign-allocation-2026.py --check
 
   secrets:
     name: Secret scan
