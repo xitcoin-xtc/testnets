@@ -35,6 +35,25 @@ The active network files are stored in [`xitcoin-testnet-v2-1`](./xitcoin-testne
 
 Documentation: https://xitcoin.com/chain/ and https://xitcoin.com/docs/. Source code: https://github.com/xitcoin-xtc.
 
+## Standard EVM contracts
+
+Installed on 2026-11-28 at their usual addresses, so wallets, Safe multisig accounts and common tools work on Xitchain Testnet. The full list with deployment transactions and code hashes is in [`xitcoin-testnet-v2-1/standard-contracts.json`](./xitcoin-testnet-v2-1/standard-contracts.json).
+
+| Contract | Address |
+| --- | --- |
+| Deterministic deployment proxy (CREATE2) | `0x4e59b44847b379578588920cA78FbF26c0B4956C` |
+| Multicall3 | `0xcA11bde05977b3631167028862bE2a173976CA11` |
+| Safe 1.3.0 GnosisSafeL2 | `0x3E5c63644E683549055b9Be8653de26E0B4CD36E` |
+| Safe 1.3.0 GnosisSafe | `0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552` |
+| Safe 1.3.0 GnosisSafeProxyFactory | `0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2` |
+| Safe 1.3.0 CompatibilityFallbackHandler | `0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4` |
+| Safe 1.3.0 MultiSend / MultiSendCallOnly | `0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761` / `0x40A2aCCbd92BCA938b02010E17A5b8929b49130D` |
+| Safe 1.3.0 CreateCall / SignMessageLib / SimulateTxAccessor | `0x7cbB62EaA69F79e6873cD1ecB2392971036cFAa4` / `0xA65387F16B013cf2Af4605Ad8aA5ec25a2cbA3a2` / `0x59AD6735bCd8152B84860Cb256dD9e96b85F69Da` |
+| Permit2 | `0x000000000022D473030F116dDEE9F6B43aC78BA3` |
+| ERC-4337 EntryPoint v0.7 | `0x0000000071727De22E5E9d8BAf0edAc6f37da032` |
+
+The runtime code of each contract is byte-identical to Ethereum mainnet, except Permit2, which stores the chain ID and its EIP-712 domain separator at construction. A test Safe (1 owner, threshold 1) was created through the factory and executed a signed transaction successfully.
+
 ## Bridge route
 
 The testnet bridge route `0x21121c16…4b5cd9` (Cronos testnet 338 to Xitchain Testnet) was initialised after genesis by `MsgInitializeRouteConfig` at height `74270`, with three bridge signers, a guardian and limits of 100 XTC per transfer, 500 XTC per day and 1,000,000 XTC outstanding. It was created disabled and paused, and no resume, configuration update, attestation or outbound transfer has been recorded since. Resuming the route, changing its limits or rotating its signers needs 2 of the 3 bridge signers; the guardian can only pause. Nobody can bridge XTC today.
