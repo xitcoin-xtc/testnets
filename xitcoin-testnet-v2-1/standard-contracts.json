@@ -1,0 +1,114 @@
+{
+  "network": "Xitchain Testnet",
+  "cosmos_chain_id": "xitcoin-testnet-v2-1",
+  "evm_chain_id": 101089,
+  "installed_on": "2026-11-28",
+  "summary": "Standard EVM contracts installed at their usual addresses so wallets, Safe multisig accounts and common tools work on Xitchain Testnet. Every address was checked before sending, and every installed runtime code was compared with Ethereum mainnet.",
+  "contracts": [
+    {
+      "name": "Deterministic deployment proxy (CREATE2)",
+      "address": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+      "deployment_tx": "0xeddf9e61fb9d8f5111840daef55e5fde0041f5702856532cdbb5a02998033d26",
+      "source": "Arachnid/deterministic-deployment-proxy presigned transaction",
+      "runtime_code_keccak256": "0x2fa86add0aed31f33a762c9d88e807c475bd51d0f52bd0955754b2608f7e4989",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Multicall3",
+      "address": "0xcA11bde05977b3631167028862bE2a173976CA11",
+      "deployment_tx": "0x07471adfe8f4ec553c1199f495be97fc8be8e0626ae307281c22534460184ed1",
+      "source": "mds1/multicall3 presigned transaction",
+      "runtime_code_keccak256": "0xd5c15df687b16f2ff992fc8d767b4216323184a2bbc6ee2f9c398c318e770891",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Safe 1.3.0 GnosisSafe",
+      "address": "0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552",
+      "deployment_tx": "0x4015329ed45c53ce24e211dd4446745d5c835790fd0f85ea9ecb3c9e99365b36",
+      "source": "Safe 1.3.0 canonical, via the CREATE2 proxy, salt 0",
+      "runtime_code_keccak256": "0xbba688fbdb21ad2bb58bc320638b43d94e7d100f6f3ebaab0a4e4de6304b1c2e",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Safe 1.3.0 GnosisSafeL2",
+      "address": "0x3E5c63644E683549055b9Be8653de26E0B4CD36E",
+      "deployment_tx": "0x57e8555ad274991ceac69743cbb488ac9a0a6f069f5d089fba4c391c73c79a4b",
+      "source": "Safe 1.3.0 canonical, via the CREATE2 proxy, salt 0",
+      "runtime_code_keccak256": "0x21842597390c4c6e3c1239e434a682b054bd9548eee5e9b1d6a4482731023c0f",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Safe 1.3.0 GnosisSafeProxyFactory",
+      "address": "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
+      "deployment_tx": "0x2cc76adc0da55826db32165e82bc87225dec47c85589ae94e58162d56cbb8187",
+      "source": "Safe 1.3.0 canonical, via the CREATE2 proxy, salt 0",
+      "runtime_code_keccak256": "0x337d7f54be11b6ed55fef7b667ea5488db53db8320a05d1146aa4bd169a39a9b",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Safe 1.3.0 CompatibilityFallbackHandler",
+      "address": "0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4",
+      "deployment_tx": "0xbb9698f8e6e7b08158cc1d9766bca087c9dfcdfc7f65ef2bf71ffc5b0c96293e",
+      "source": "Safe 1.3.0 canonical, via the CREATE2 proxy, salt 0",
+      "runtime_code_keccak256": "0x03e69f7ce809e81687c69b19a7d7cca45b6d551ffdec73d9bb87178476de1abf",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Safe 1.3.0 MultiSend",
+      "address": "0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761",
+      "deployment_tx": "0xfb49d52c8d63df675cffd7d6ea32de6261d0e0d01f8eaec9e136de01f49acd10",
+      "source": "Safe 1.3.0 canonical, via the CREATE2 proxy, salt 0",
+      "runtime_code_keccak256": "0x0208282bd262360d0320862c5ac70f375f5ed3b9d89a83a615b4d398415bdc83",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Safe 1.3.0 MultiSendCallOnly",
+      "address": "0x40A2aCCbd92BCA938b02010E17A5b8929b49130D",
+      "deployment_tx": "0xf982e29ef2f1c33a32e213700820fd553286e5b76c45a15af8b7962c595222ec",
+      "source": "Safe 1.3.0 canonical, via the CREATE2 proxy, salt 0",
+      "runtime_code_keccak256": "0xa9865ac2d9c7a1591619b188c4d88167b50df6cc0c5327fcbd1c8c75f7c066ad",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Safe 1.3.0 CreateCall",
+      "address": "0x7cbB62EaA69F79e6873cD1ecB2392971036cFAa4",
+      "deployment_tx": "0x02092a097ea21e921c0a682ad9a7b603af9adf4826b0c836922df2b614a2c283",
+      "source": "Safe 1.3.0 canonical, via the CREATE2 proxy, salt 0",
+      "runtime_code_keccak256": "0x8155d988823a4f6f1bcbc76a64af8e510c4ce68819290d43cf24956bd24dee82",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Safe 1.3.0 SimulateTxAccessor",
+      "address": "0x59AD6735bCd8152B84860Cb256dD9e96b85F69Da",
+      "deployment_tx": "0xbb3c61ab42320cec95d5d3ad002b9dca96d70a468bd968fbd3cf41071d6e0c72",
+      "source": "Safe 1.3.0 canonical, via the CREATE2 proxy, salt 0",
+      "runtime_code_keccak256": "0xb3fb9763869f2c09a2ac5a425d2dd6060bf7ef46b3899049d71a711e71e00f04",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Safe 1.3.0 SignMessageLib",
+      "address": "0xA65387F16B013cf2Af4605Ad8aA5ec25a2cbA3a2",
+      "deployment_tx": "0x07162b00331384de11409cfdb6c024c9da39599beb5f50532a9f7f5f6a9062b4",
+      "source": "Same input as the Ethereum mainnet deployment, via the CREATE2 proxy",
+      "runtime_code_keccak256": "0x3ac65dea3cc9dd0d7b7b800f834e3d73415b4e944bb94555c3e4a08fb137e918",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    },
+    {
+      "name": "Permit2",
+      "address": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+      "deployment_tx": "0x908ee7ca7dd72726105d1a42d442a4b4aa54bf77a892035238d877ec3967e69d",
+      "source": "Same input as the Ethereum mainnet deployment, via the CREATE2 proxy",
+      "runtime_code_keccak256": "0x2806f1947296e4c53ce079eebecd6564659d8789f9378310575f30eeb063f721",
+      "runtime_code_identical_to_ethereum_mainnet": false,
+      "note": "Differs from Ethereum only in the immutable cached chain ID and EIP-712 domain separator set by the constructor."
+    },
+    {
+      "name": "ERC-4337 EntryPoint v0.7",
+      "address": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+      "deployment_tx": "0x913d4d62ac134c5c13b91667bf33567a4f171e8d12bc6139676333ba0ae8ede7",
+      "source": "Same input as the Ethereum mainnet deployment, via the CREATE2 proxy",
+      "runtime_code_keccak256": "0x8db5ff695839d655407cc8490bb7a5d82337a86a6b39c3f0258aa6c3b582fc58",
+      "runtime_code_identical_to_ethereum_mainnet": true
+    }
+  ]
+}
